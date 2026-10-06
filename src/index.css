@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+}
+
+.lifeos {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 32px 5%;
+  background: #111827;
+  color: white;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.header p {
+  margin-top: 8px;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  gap: 24px;
+  padding: 16px 5%;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.navigation a {
+  color: #1f2937;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navigation a:hover {
+  background: #111827;
+  color: white;
+}
+
+/* Main */
+.main-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 0;
+  flex: 1;
+}
+
+.hero-section {
+  margin-bottom: 32px;
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+}
+
+.card p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.card button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+.card button:hover {
+  opacity: 0.85;
+}
+
+/* Footer */
+.footer {
+  padding: 24px 5%;
+  text-align: center;
+  background: #111827;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+  .navigation {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    width: 92%;
+    padding: 32px 0;
+  }
+
+  .hero-section h2 {
+    font-size: 1.6rem;
+  }
+}
