@@ -1,9 +1,8 @@
+import { Routes, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
-import Navigation from "./components/Navigation";
-import Hero from "./components/Hero";
-import TaskCard from "./components/TaskCard";
-import GoalCard from "./components/GoalCard";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -11,23 +10,16 @@ function App() {
 
       <Header />
 
-      <Navigation />
+      <nav className="navigation">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
 
-      <main className="main-content" id="home">
-
-        <Hero />
-
-        <section className="content-grid">
-
-          <TaskCard title="Tasks" />
-
-          <GoalCard
-            title="Goals"
-            description="Set goals and keep yourself focused."
-          />
-
-        </section>
-
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </main>
 
       <Footer />
